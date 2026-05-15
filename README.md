@@ -1,23 +1,54 @@
-# LAST TRAIN HOME
+# Last Train Home — Web Demo
 
-A compact browser arcade game built with vanilla HTML, CSS, and JavaScript. Collect five golden tickets, avoid the moving shadows, and reach the train door before the platform clock runs out.
+A GitHub/Vercel-ready React prototype for **Last Train Home**, a psychological horror passenger-inspection game.
 
-## Local development
+## What is included
+
+- Station progression across 8 stops
+- Passenger inspection loop: inspect, question, allow, deny
+- Anomaly system with subtle and obvious tells
+- Hidden stress system represented by visual distortion, flicker, status text, and UI pressure
+- Three ending states: survived, collapse, anomaly truth
+- Local best-run stats via `localStorage`
+- No paid assets, no backend, no API keys
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
 ```
 
-The development server starts at <http://localhost:3000>.
+Then open the local URL printed by Vite.
 
-## Production build
+## Build
 
 ```bash
 npm run build
+npm run preview
 ```
 
-The build outputs static files to `dist/`.
+## Deploy to Vercel
 
-## Vercel deployment
+1. Push this folder to a GitHub repository.
+2. In Vercel, choose **Add New Project**.
+3. Import the GitHub repo.
+4. Vercel should detect Vite automatically.
+5. Build command: `npm run build`
+6. Output directory: `dist`
 
-This repository includes `vercel.json` so Vercel runs `npm run build` and deploys the `dist` directory.
+## Gameplay
+
+- Click a passenger to inspect them.
+- Read their ticket, visible behaviour, and reflection clue.
+- Use **Question** when unsure.
+- Use **Allow** for normal passengers.
+- Use **Deny** for anomalies.
+- Wrong choices raise stress. High stress makes the interface unreliable.
+
+## Suggested next upgrades
+
+- Add WebAudio ambience and heartbeat layers.
+- Replace CSS passengers with 2D character art or lightweight 3D.
+- Add route randomization and daily seed sharing.
+- Add streamer mode with visible final stats and share card.
